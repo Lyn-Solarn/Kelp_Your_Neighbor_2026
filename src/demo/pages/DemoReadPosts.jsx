@@ -57,13 +57,13 @@ const DemoReadPosts = () => {
                 filteredAndSortedPosts.map((post) => (
                     <div key={post.id} className='post'>
                         <div className='top-post'>
-                            <div className='top-left'>
+                            <Link to={`/profile/${post.posted_by}`} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <img className='profile-photo'  src={Profile_Pic} alt="Profile"/>
                                 <div>
-                                    <p id='username'>{post.username}</p>
+                                    <p id='username' style={{ cursor: 'pointer' }}>{post.username}</p>
                                     <p id='date'>{formatDate(post.created_at)}</p>
                                 </div>
-                            </div>
+                            </Link>
                             <img className='icon' src={More_Icon} title="Menu"/>
                         </div>
                         

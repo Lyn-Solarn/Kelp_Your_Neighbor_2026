@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom'
 import DemoHomePage from './pages/DemoHomePage'
 import DemoReadPosts from './pages/DemoReadPosts'
 import DemoFullPost from './pages/DemoFullPost'
+import DemoProfilePage from './pages/DemoProfilePage'
 import { Link } from 'react-router-dom'
 import Profile_Pic from '../assets/Profile_Pic.png'
 import '../App.css'
@@ -20,6 +21,10 @@ function DemoApp() {
     {
       path: "/post/:id",
       element: <DemoFullPost />
+    },
+    {
+      path: "/profile/:userId",
+      element: <DemoProfilePage />
     }
   ]);
 
@@ -35,7 +40,9 @@ function DemoApp() {
         </div>
 
         <div className='right-side-header'>
-          <img className='profile-photo'  src={Profile_Pic} alt="Demo"/>
+          <Link to='/profile/1' style={{ textDecoration: 'none' }}>
+            <img className='profile-photo'  src={Profile_Pic} alt="Demo" style={{ cursor: 'pointer' }}/>
+          </Link>
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { getPost } from '../mockData'
 import '../../App.css'
 import More_Icon from '../../assets/More_Icon.png'
@@ -48,13 +48,13 @@ const DemoFullPost = () => {
     return (
         <div className='post'>
             <div className='top-post'>
-                <div className='top-left'>
+                <Link to={`/profile/${post.posted_by}`} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <img className='profile-photo' src={Profile_Pic} alt="Profile"/>
                     <div>
-                        <p id='username'>{post.username}</p>
+                        <p id='username' style={{ cursor: 'pointer' }}>{post.username}</p>
                         <p id='date'>{formatDate(post.created_at)}</p>
                     </div>
-                </div>
+                </Link>
                 <img className='icon' src={More_Icon} alt="Menu" title="Edit"/>
             </div>
             
