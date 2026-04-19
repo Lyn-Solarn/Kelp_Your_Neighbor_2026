@@ -3,10 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   color: #0a2342;
-  background:
-    radial-gradient(circle at top left, rgba(132, 188, 156, 0.38), transparent 28%),
-    radial-gradient(circle at right 18%, rgba(79, 124, 172, 0.24), transparent 24%),
-    linear-gradient(180deg, #f4f0f2 0%, #edf7f3 100%);
+  background: #0a2342;
   --bg: #f7edf0;
   --bg-alt: #edf7f3;
   --surface: rgba(255, 255, 255, 0.72);
