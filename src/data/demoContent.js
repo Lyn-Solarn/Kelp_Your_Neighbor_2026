@@ -115,7 +115,7 @@ export const demoPosts = [
     description:
       'The colors were unreal in person. I would love help narrowing down the species, and I am especially curious whether this pattern changes by age.',
     image:
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80',
+      'https://i.redd.it/67zaleba9fj41.jpg',
     pearls: 18,
     tags: ['sea-lemon', 'eelgrass'],
   },
@@ -128,7 +128,7 @@ export const demoPosts = [
     description:
       'Tiny sea stars all across the rocks at low tide this morning. Sharing the spot here mostly to compare notes on timing and conditions.',
     image:
-      'https://images.unsplash.com/photo-1520301255226-bf5f144451c1?auto=format&fit=crop&w=1200&q=80',
+      'https://thetideisout.com/wp-content/uploads/2023/09/img_2353.jpeg',
     pearls: 27,
     tags: ['ochre-sea-star'],
   },
@@ -153,7 +153,7 @@ export const demoPosts = [
     description:
       'Sharing this because the meadow was packed with juvenile fish and invertebrates. It felt like a reminder that the plant itself is the habitat story.',
     image:
-      'https://images.unsplash.com/photo-1518398046578-8cca57782e17?auto=format&fit=crop&w=1200&q=80',
+      'https://salishmagazine.org/wp-content/uploads/2019/05/20190522-4296D800.jpg',
     pearls: 14,
     tags: ['eelgrass'],
   },
