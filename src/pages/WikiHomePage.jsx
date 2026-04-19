@@ -42,7 +42,7 @@ const WikiHomePage = () => {
           />
         </div>
 
-        <div className='info-card'>
+        <div className='info-card flat-card'>
           <h2>Top wikis</h2>
           <div className='wiki-mini-list'>
             {topTaxa.map((taxon) => (

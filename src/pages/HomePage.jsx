@@ -14,7 +14,7 @@ const HomePage = () => {
       />
 
       <aside className='feed-side-column'>
-        <div className='info-card'>
+        <div className='info-card flat-card'>
           <span className='eyebrow'>Top wikis</span>
           <h2>Most active organism pages</h2>
           <div className='wiki-mini-list'>
@@ -27,7 +27,7 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className='info-card'>
+        <div className='info-card flat-card'>
           <span className='eyebrow'>Featured explorers</span>
           <h2>Profiles to review</h2>
           <div className='wiki-mini-list'>

@@ -145,7 +145,7 @@
 .auth-panel,
 .empty-state {
   border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 30px;
+  border-radius: 0;
   background: var(--surface);
   color: var(--text);
   backdrop-filter: blur(18px);
@@ -261,7 +261,7 @@ button:hover,
 #password-login {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: 0px;
   background: rgba(255, 255, 255, 0.7);
   color: var(--text);
   padding: 0.95rem 1rem;
@@ -283,6 +283,11 @@ button:hover,
 .post-card {
   padding: 1.2rem;
   background: rgba(255, 255, 255, 0.74);
+  border-radius: 0;
+}
+
+.flat-card {
+  border-radius: 0;
 }
 
 .post-card-top,
@@ -401,7 +406,7 @@ button:hover,
 .profile-hero,
 .profile-directory-card {
   border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 28px;
+  border-radius: 0;
   background: var(--surface);
   color: var(--text);
   box-shadow: var(--shadow);
@@ -479,7 +484,7 @@ button:hover,
   flex-direction: column;
   gap: 0.8rem;
   padding: 1.25rem;
-  border-radius: 24px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.48);
   border: 1px solid rgba(255, 255, 255, 0.72);
 }
@@ -493,6 +498,11 @@ button:hover,
 #title-input {
   font-size: 1.8rem;
   font-weight: 800;
+  border-radius: 0;
+}
+
+#submit-button {
+  border-radius: 0;
 }
 
 #description {
@@ -682,7 +692,7 @@ button:hover,
 
 .wiki-card {
   padding: 1.25rem;
-  border-radius: 26px;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.72);
   background: rgba(255, 255, 255, 0.74);
   box-shadow: var(--shadow);
@@ -729,7 +739,7 @@ button:hover,
   max-height: calc(100vh - 3rem);
   overflow: auto;
   padding: 1.5rem;
-  border-radius: 28px;
+  border-radius: 0;
   background: var(--surface-strong);
   color: var(--text);
   box-shadow: var(--shadow);
@@ -830,7 +840,7 @@ button:hover,
 .profile-identity-card,
 .profile-summary-panel {
   padding: 1.5rem;
-  border-radius: 30px;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.72);
   background: var(--surface);
   color: var(--text);
