@@ -198,6 +198,8 @@ button,
   color: white;
 }
 
+
+
 .secondary-action,
 #delete-button {
   background: rgba(255, 255, 255, 0.74);
@@ -802,6 +804,21 @@ button:hover,
   transform: none;
 }
 
+
+.wiki-mini-card:hover,
+.post-card:not(.post-card-full):hover,
+#searchbar:hover,
+#sort-options:hover {
+  background: rgba(227, 227, 227, 0.74);
+  transition: background-color 0.25s;
+}
+
+.tag-pill:hover{
+  background: rgba(10, 35, 66, 0.30);
+  transform: scale(1.05);
+  transition: background-color 0.25s, transform 0.25s;
+}
+
 .post-preview {
   margin: 0;
   color: var(--text-soft);
@@ -1006,4 +1023,5 @@ button:hover,
   .profile-summary-grid {
     grid-template-columns: 1fr;
   }
+
 }
