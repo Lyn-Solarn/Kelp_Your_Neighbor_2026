@@ -41,7 +41,7 @@ const FullPost = () => {
 
       const { data: userData, error: userError } = await supabase
         .from('user')
-        .select('username')
+        .select('username, avatar_url')
         .eq('id', data.posted_by)
         .single()
 
@@ -52,6 +52,7 @@ const FullPost = () => {
       setPost({
         ...data,
         username: userData?.username || 'Unknown explorer',
+        avatar_url: userData?.avatar_url,
       })
       setLoading(false)
     }
@@ -87,6 +88,7 @@ const FullPost = () => {
         image={post.image}
         pearls={post.pearls}
         tags={post.tags}
+        avatar_url={post.avatar_url}
       />
     </section>
   )

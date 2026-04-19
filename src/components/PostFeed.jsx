@@ -57,20 +57,21 @@ const PostFeed = ({
       if (userIds.length) {
         const { data: usersData, error: userError } = await supabase
           .from('user')
-          .select('id, username')
+          .select('id, username, avatar_url')
           .in('id', userIds)
 
         if (userError) {
           console.error('Error fetching usernames:', userError.message)
         } else {
-          usersById = Object.fromEntries(usersData.map((entry) => [entry.id, entry.username]))
+          usersById = Object.fromEntries(usersData.map((entry) => [entry.id, entry]))
         }
       }
 
       setPosts(
         data.map((post) => ({
           ...post,
-          username: usersById[post.posted_by] || 'Unknown explorer',
+          username: usersById[post.posted_by]?.username || 'Unknown explorer',
+          avatar_url: usersById[post.posted_by]?.avatar_url,
           tags: Array.isArray(post.tags) ? post.tags : [],
         }))
       )
@@ -157,6 +158,7 @@ const PostFeed = ({
               pearls={post.pearls}
               tags={post.tags}
               image={post.image}
+              avatar_url={post.avatar_url}
               onOpenPost={() => setSelectedPost(post)}
             />
           ))}

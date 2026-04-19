@@ -74,6 +74,7 @@ export const demoProfiles = [
     observations: 48,
     species: 19,
     identifications: 112,
+    avatar_url: null,
   },
   {
     id: 2,
@@ -86,6 +87,7 @@ export const demoProfiles = [
     observations: 61,
     species: 27,
     identifications: 154,
+    avatar_url: null,
   },
   {
     id: 3,
@@ -98,6 +100,7 @@ export const demoProfiles = [
     observations: 34,
     species: 16,
     identifications: 87,
+    avatar_url: null,
   },
 ]
 

@@ -23,6 +23,7 @@ const PostModal = ({ post, comments, onClose }) => {
           image={post.image}
           pearls={post.pearls}
           tags={post.tags}
+          avatar_url={post.avatar_url}
           commentsOverride={comments}
         />
       </div>

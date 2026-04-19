@@ -133,7 +133,7 @@ const FullCard = (props) => {
     <article className='post-card post-card-full'>
       <div className='post-card-top'>
         <div className='post-meta'>
-          <img className='profile-photo' src={Profile_Pic} alt='' />
+          <img className='profile-photo' src={props.avatar_url || Profile_Pic} alt='' />
           <div>
             <Link className='username-link' to={`/profiles/${props.username}`}>
               <p className='username'>{props.username}</p>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useLogin } from '../hooks/useLogin'
 import { hasSupabaseConfig } from '../client'
 import { demoProfiles } from '../data/demoContent'
+import Profile_Pic from '../assets/Profile_Pic.png'
 import '../App.css'
 
 const ProfilePage = () => {
@@ -85,6 +86,9 @@ const ProfilePage = () => {
     return (
       <section className='page-section'>
         <div className='profile-card'>
+          {user.avatar_url && (
+            <img src={user.avatar_url} alt={user.username} style={{ width: '100px', height: '100px', borderRadius: '8px', marginBottom: '16px' }} />
+          )}
           <span className='eyebrow'>Account</span>
           <h1>{user.username}</h1>
           <p className='section-copy'>
@@ -92,6 +96,7 @@ const ProfilePage = () => {
           </p>
           <div className='profile-actions'>
             <Link className='secondary-action' to={`/profiles/${user.username}`}>View public profile</Link>
+            <Link className='secondary-action' to='/dollmaker'>Customize otter avatar</Link>
             <Link className='secondary-action' to='/newpost'>Create a post</Link>
             <button onClick={handleLogout} type='button'>Log out</button>
           </div>

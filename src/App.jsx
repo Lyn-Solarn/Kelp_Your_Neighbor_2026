@@ -1,6 +1,7 @@
 import { NavLink, useRoutes } from 'react-router-dom'
 import CreatePost from './pages/CreatePost'
 import DemoPage from './pages/DemoPage'
+import DollmakerPage from './pages/DollmakerPage'
 import EditPost from './pages/EditPost'
 import FullPost from './pages/FullPost'
 import HomePage from './pages/HomePage'
@@ -62,6 +63,10 @@ function App() {
     {
       path: "/demo",
       element: <DemoPage />
+    },
+    {
+      path: "/dollmaker",
+      element: <DollmakerPage />
     }
   ])
 
@@ -99,7 +104,7 @@ function App() {
             {hasSupabaseConfig ? 'Database connected' : 'Demo data mode'}
           </span>
           <NavLink className='profile-link sidebar-profile' to='/profile'>
-            <img className='profile-photo' src={Profile_Pic} alt='' />
+            <img className='profile-photo' src={user?.avatar_url || Profile_Pic} alt='' />
             <span>{user?.username ?? 'Profile'}</span>
           </NavLink>
         </div>

@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Card from '../components/Card'
 import PostModal from '../components/PostModal'
+import Profile_Pic from '../assets/Profile_Pic.png'
 import { hasSupabaseConfig, supabase } from '../client'
 import {
   demoComments,
@@ -48,7 +49,7 @@ const PublicProfilePage = () => {
 
       const { data: userData, error: userError } = await supabase
         .from('user')
-        .select('id, username, created_at')
+        .select('id, username, created_at, avatar_url')
         .eq('username', username)
         .single()
 
@@ -132,6 +133,9 @@ const PublicProfilePage = () => {
     <section className='page-section'>
       <div className='profile-inat-header'>
         <div className='profile-identity-card'>
+          {profile.avatar_url && (
+            <img src={profile.avatar_url} alt={profile.username} style={{ width: '100px', height: '100px', borderRadius: '8px', marginBottom: '16px' }} />
+          )}
           <span className='eyebrow'>Explorer profile</span>
           <h1>{profile.displayName}</h1>
           <p className='profile-handle'>@{profile.username}</p>
@@ -203,6 +207,7 @@ const PublicProfilePage = () => {
               pearls={post.pearls}
               tags={post.tags}
               image={post.image}
+              avatar_url={profile.avatar_url}
               onOpenPost={() => setSelectedPost(post)}
             />
           ))}
