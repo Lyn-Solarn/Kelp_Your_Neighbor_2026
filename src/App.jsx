@@ -1,6 +1,5 @@
 import { NavLink, useRoutes } from 'react-router-dom'
 import CreatePost from './pages/CreatePost'
-import DemoPage from './pages/DemoPage'
 import EditPost from './pages/EditPost'
 import FullPost from './pages/FullPost'
 import HomePage from './pages/HomePage'
@@ -61,10 +60,6 @@ function App() {
       element: <WikiDetailPage />
     },
     {
-      path: "/demo",
-      element: <DemoPage />
-    },
-    {
       path: "/ocean-news",
       element: <OceanNewsPage />
     }
@@ -93,12 +88,8 @@ function App() {
             <span className='sidebar-icon'>03</span>
             <span>Wiki</span>
           </NavLink>
-          <NavLink className='sidebar-link' to='/demo'>
-            <span className='sidebar-icon'>04</span>
-            <span>Design Lab</span>
-          </NavLink>
           <NavLink className='sidebar-link' to='/ocean-news'>
-            <span className='sidebar-icon'>05</span>
+            <span className='sidebar-icon'>04</span>
             <span>Ocean News</span>
           </NavLink>
         </nav>
