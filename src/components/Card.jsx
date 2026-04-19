@@ -4,7 +4,7 @@ import '../App.css'
 import { supabase } from '../client'
 import More_Icon from '../assets/More_Icon.png'
 import Profile_Pic from '../assets/Profile_Pic.png'
-import Pearls_Icon from '../assets/pearl.svg'
+import Pearls_Icon from '../assets/pearl.png'
 import { useLogin } from '../hooks/useLogin'
 import TagPill from './TagPill'
 

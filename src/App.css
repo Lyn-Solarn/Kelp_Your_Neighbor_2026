@@ -4,6 +4,8 @@
 
 .app-shell {
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .site-header {
@@ -122,6 +124,15 @@
   gap: 1.5rem;
 }
 
+.section-heading {
+  color: #f2f7fc;
+}
+
+.section-heading .eyebrow,
+.section-heading .section-copy {
+  color: rgba(242, 247, 252, 0.78);
+}
+
 .home-grid,
 .demo-grid {
   display: grid;
@@ -194,8 +205,8 @@ button,
 button,
 #submit-button,
 #comment-submit {
-  background: var(--blue-deep);
-  color: white;
+  background: #edf2f7;
+  color: #0a2342;
 }
 
 .secondary-action,
@@ -721,6 +732,12 @@ button:hover,
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  color: #f2f7fc;
+}
+
+.wiki-detail-header .eyebrow,
+.wiki-detail-header .scientific-name {
+  color: rgba(242, 247, 252, 0.78);
 }
 
 .learn-more-button {

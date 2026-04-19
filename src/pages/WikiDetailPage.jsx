@@ -48,12 +48,6 @@ const WikiDetailPage = () => {
 
       <div className='wiki-detail-layout'>
         <div className='wiki-main-column'>
-          <div className='profile-card'>
-            <h2>Tagged posts</h2>
-            <p className='helper-copy'>
-              Clicking a post opens it in place so readers can stay anchored in the wiki context.
-            </p>
-          </div>
 
           <div className='post-list'>
             {relatedPosts.map((post) => (
