@@ -198,6 +198,8 @@ button,
   color: white;
 }
 
+
+
 .secondary-action,
 #delete-button {
   background: rgba(255, 255, 255, 0.74);
@@ -261,7 +263,7 @@ button:hover,
 #password-login {
   width: 100%;
   border: 1px solid var(--line);
-  border-radius: 0px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.7);
   color: var(--text);
   padding: 0.95rem 1rem;
@@ -802,6 +804,25 @@ button:hover,
   transform: none;
 }
 
+
+.wiki-mini-card:hover,
+.post-card:not(.post-card-full):hover,
+#searchbar:hover,
+#sort-options:hover,
+.wiki-card:hover,
+.demo-panel:hover,
+.profile-link.sidebar-profile:hover,
+.sidebar-link:hover {
+  background: rgba(227, 227, 227, 0.74);
+  transition: background-color 0.25s;
+}
+
+.tag-pill:hover{
+  background: rgba(10, 35, 66, 0.30);
+  transform: scale(1.05);
+  transition: background-color 0.25s, transform 0.25s;
+}
+
 .post-preview {
   margin: 0;
   color: var(--text-soft);
@@ -1006,4 +1027,5 @@ button:hover,
   .profile-summary-grid {
     grid-template-columns: 1fr;
   }
+
 }
