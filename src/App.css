@@ -280,6 +280,12 @@ button:hover,
   gap: 1rem;
 }
 
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
 .post-card {
   padding: 1.2rem;
   background: rgba(255, 255, 255, 0.74);
@@ -966,6 +972,10 @@ button:hover,
   .wiki-landing-grid,
   .profile-inat-header,
   .inat-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-list {
     grid-template-columns: 1fr;
   }
 
