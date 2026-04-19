@@ -13,6 +13,7 @@ import { hasSupabaseConfig } from './client'
 import { useLogin } from './hooks/useLogin'
 import WikiDetailPage from './pages/WikiDetailPage'
 import WikiHomePage from './pages/WikiHomePage'
+import OceanNewsPage from './pages/OceanNewsPage'
 import './App.css'
 
 function App() {
@@ -62,6 +63,10 @@ function App() {
     {
       path: "/demo",
       element: <DemoPage />
+    },
+    {
+      path: "/ocean-news",
+      element: <OceanNewsPage />
     }
   ])
 
@@ -91,6 +96,10 @@ function App() {
           <NavLink className='sidebar-link' to='/demo'>
             <span className='sidebar-icon'>04</span>
             <span>Design Lab</span>
+          </NavLink>
+          <NavLink className='sidebar-link' to='/ocean-news'>
+            <span className='sidebar-icon'>05</span>
+            <span>Ocean News</span>
           </NavLink>
         </nav>
 

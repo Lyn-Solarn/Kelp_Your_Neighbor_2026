@@ -24,12 +24,16 @@ npm install
 cp .env.example .env.local
 ```
 
-3. Add your Supabase values to `.env.local`:
+3. Add your environment values to `.env.local`:
 
 ```bash
 VITE_SUPABASE_URL=
 VITE_SUPABASE_ANON_KEY=
+VITE_NEWS_API_KEY=
 ```
+
+`VITE_NEWS_API_KEY` is used by the `/ocean-news` page to load top headlines from NewsAPI using
+the `top-headlines` endpoint with `category=science`, `q=ocean`, and `pageSize=3`.
 
 4. Start the app:
 
