@@ -67,6 +67,15 @@ h1 {
   font-size: clamp(2.4rem, 4vw, 4rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+}
+
+h2,
+h3 {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
 }
 
 * {
