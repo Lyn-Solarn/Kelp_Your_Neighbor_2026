@@ -1,14 +1,16 @@
 import { createClient } from '@supabase/supabase-js'
 
-// Initialize Supabase client
-// These credentials will be provided in your .env.local file
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL?.trim() ?? ''
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY?.trim() ?? ''
 
-if (!supabaseUrl || !supabaseAnonKey) {
+export const hasSupabaseConfig = Boolean(supabaseUrl && supabaseAnonKey)
+
+if (!hasSupabaseConfig) {
   console.warn(
-    'Warning: Supabase credentials are not configured. Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your .env.local file.'
+    'Supabase credentials are not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to connect live data.'
   )
 }
 
-export const supabase = createClient(supabaseUrl || '', supabaseAnonKey || '')
+export const supabase = hasSupabaseConfig
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null
